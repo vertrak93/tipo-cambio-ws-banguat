@@ -221,7 +221,7 @@ def seleccionMenuConversion(opcion_seleccionada):
         os.system("clear")
         print("Seleccione una opción valida")
         pausa()
-        printMenuConversion(opcion_seleccionada)
+        printMenuConversion(tipo_conversion[0])
         
     if opcion_seleccionada=='0':
        printMenuPrincipal()
@@ -232,7 +232,7 @@ def seleccionMenuConversion(opcion_seleccionada):
         os.system("clear")
         print("Seleccione una opción valida")
         pausa()
-        printMenuConversion(opcion_seleccionada)
+        printMenuConversion(tipo_conversion[0])
 
 #imprime menu procipal del programa
 def printMenuPrincipal():
@@ -286,7 +286,7 @@ def conversion(tipoCambioRef, opcion_seleccionada):
 
     print("La conversión es: " + str(round(resultado,2)))
     pausa()
-    printMenuConversion(opcion_seleccionada)
+    printMenuConversion(tipo_conversion[0])
 
 #init program
 def run():
