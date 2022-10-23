@@ -38,7 +38,7 @@ def printXML(xml):
     namespaces=namespaces
     ):
         print ('---------------------------')
-        for ch in el.getchildren():
+        for ch in list(el):
             print('{:>15}: {:<30}'.format(ch.tag[len(ignoreTxt):], ch.text))
 
 #convierte xml de catalogo de monedas al tipo "Catalogo"
@@ -63,7 +63,7 @@ def request_to_Catalogo(xml):
         nombre = ''
         valor = ''
         
-        for ch in el.getchildren():
+        for ch in list(el):
             #print('{:>15}: {:<30}'.format(ch.tag[len(ignoreTxt):], ch.text))
             if(valor ==''):
                 valor = ch.text
@@ -96,7 +96,7 @@ def request_to_referencia(xml):
     ):  
         x = 0
         tmp = float(0)
-        for ch in el.getchildren():
+        for ch in list(el):
             
             if x == 0: 
                 x=1 
@@ -125,7 +125,7 @@ def request_to_cambioDia(xml):
     namespaces=namespaces
     ):  
         contador = 0
-        for ch in el.getchildren():
+        for ch in list(el):
             if contador == 2: 
                 tmp =  float(ch.text) 
                 break
